@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Incluindo Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Estilo personalizado -->
-    <style>
-        body {
-            font-size: 20px;
-            text-align: center;
-            padding-top: 80px;
-        }
-
-        .navbar {
+  <meta charset="UTF-8">
+  <title>Meu Portfólio</title>
+  <style>
+    body {
+      font-size: 24px;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .navbar {
             background-color: #800000;
             
         }
@@ -22,24 +21,22 @@
         .navbar-brand, .navbar-nav .nav-link {
             color: #fff;
         }
-
         .jumbotron {
             background-image: url('background.jpg');
             background-size: cover;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 100px;
         }
-
         .section {
-            padding: 10px 0;
+            padding: 50px 0;
         }
 
         .footer {
             background-color: #800000;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
         }
         h1{
             color:black;
@@ -61,84 +58,88 @@
             
             width: 300px;
         }
-    </style>
+  </style>
 </head>
+
 <body>
-    <div id="letreiro"></div>
-
-    <script>
-      // Função para criar o letreiro
-      function criarLetreiro() {
-        const mensagem = "FUNÇÃO EXPERIMENTAL JAVA SCRIPT";
-        const velocidade = 100; // Velocidade do movimento (em milissegundos)
-        const letreiroElemento = document.getElementById("letreiro");
-        letreiroElemento.innerText = mensagem;
-  
-        // Função para atualizar o letreiro
-        function atualizarLetreiro() {
-          mensagem = mensagem.substring(1) + mensagem.charAt(0);
-          letreiroElemento.innerText = mensagem;
-        }
-  
-        // Atualiza o letreiro a cada intervalo de tempo (velocidade)
-        setInterval(atualizarLetreiro, velocidade);
-      }
-  
-      // Chama a função criarLetreiro quando o documento estiver carregado
-      document.addEventListener("DOMContentLoaded", criarLetreiro);
-    </script>
-
-<!-- Barra de Navegação -->
+ 
+  <!-- Barra de Navegação -->
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Meu Portfólio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Página Inicial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+  <div class="container">
+      <a class="navbar-brand" href="#">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#home">Página Inicial</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">Sobre</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contato</a>
+              </li>
+          </ul>
+      </div>
+  </div>
 </nav>
 
 <!-- Sobre -->
 <div id="about" class="section">
-    <div class="container">
-        <h2>Sobre Mim</h2>
-        <br><br>
-        <img src="foto.jpg" alt="foto da autora do portfólio">
-        <br><br><br>
-        <p>Experiência de 4 anos na área elétrica/eletrônica, tais como manutenção elétrica e mecânica, acompanhamento no desenvolvimento e execução de projetos elétricos.
+  <div class="container">
+      <h2>Sobre Mim</h2>
+      <br>
+      
+      <div id="letreiro">
+        <script>
+          // Função para criar o letreiro
+          function criarLetreiro() {
+            let mensagem = "  Conheça o meu Trabalho!  "; //erro usando const o letreiro fica travado
+            const velocidade = 120; // Velocidade do movimento (em milissegundos)
+            const letreiroElemento = document.getElementById("letreiro");
+            letreiroElemento.innerText = mensagem;
+      
+            // Função para atualizar o letreiro
+            function atualizarLetreiro() {
+              mensagem = mensagem.substring(1) + mensagem.charAt(0);
+              letreiroElemento.innerText = mensagem;
+            }
+      
+            // Atualiza o letreiro a cada intervalo de tempo (velocidade)
+            setInterval(atualizarLetreiro, velocidade);
+          }
+      
+          // Chama a função criarLetreiro quando o documento estiver carregado
+          document.addEventListener("DOMContentLoaded", criarLetreiro);
+        </script>
+        </div>
+
+      <br>
+      <img src="foto.jpg" alt="foto da autora do portfólio">
+      <br><br><br>
+      <p>Experiência de 4 anos na área elétrica/eletrônica, tais como manutenção elétrica e mecânica, acompanhamento no desenvolvimento e execução de projetos elétricos.
 Sou técnico eletrotécnico formado pelo SENAI - CETEL (dez/2014), técnico em instrumentação e controle de processos industriais (jun/2015)
 Graduado em Engenharia Elétrica pela Faculdade Pitágoras (jul/2020). Tenho conhecimento em pacote Office, conhecimento em AutoCAD, Inglês nível Básico.
 Atualmente trabalhando como motorista de aplicativos e estudando programação no projeto Programando Sonhos Vilas e Favelas.</p>
-    </div>
+  </div>
 </div>
 
 <!-- Contato -->
 <div id="contact" class="section">
-    <div class="container">
-        <h2>Contato</h2>
-        <p>Você pode entrar em contato pelo meu email:nataliadeolive@gmail.com</p>
-    </div>
+  <div class="container">
+      <h2>Contato</h2>
+      <p>Você pode entrar em contato pelo meu email:nataliadeolive@gmail.com</p>
+  </div>
 </div>
 
 <!-- Rodapé -->
 <footer class="footer">
-    <div class="container">
-        <p id = "paragrafo1">&copy; 2023 Meu Portfólio</p>
-    </div>
+  <div class="container">
+      <p id = "paragrafo1">&copy; 2023 Meu Portfólio</p>
+  </div>
 </footer>
 
 <!-- Scripts do Bootstrap -->
@@ -147,4 +148,5 @@ Atualmente trabalhando como motorista de aplicativos e estudando programação n
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
